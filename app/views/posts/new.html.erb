@@ -1,0 +1,9 @@
+<div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+  <h1 class="text-3xl font-bold mb-6 text-gray-900">New Post</h1>
+
+  <%= render "form", post: @post %>
+
+  <div class="mt-6">
+    <%= link_to "Back to posts", posts_path, class: "text-blue-500 hover:text-blue-700 font-semibold" %>
+  </div>
+</div>

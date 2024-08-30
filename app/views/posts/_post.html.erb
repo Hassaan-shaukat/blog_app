@@ -1,0 +1,13 @@
+<div id="<%= dom_id post %>" class="bg-white shadow-md rounded-lg p-6 mb-4">
+  <p class="mb-4">
+    <strong class="text-gray-900 font-semibold">Title:</strong>
+    <span class="text-gray-700"><%= post.title %></span>
+  </p>
+
+  <p class="mb-4">
+    <strong class="text-gray-900 font-semibold">Content:</strong>
+    <span class="text-gray-700"><%= post.content %></span>
+  </p>
+
+  <%= render 'shared/like_button', likeable: post, class: 'inline-block' %>
+</div>

@@ -1,0 +1,10 @@
+<turbo-frame id="<%= dom_id(likeable, :like_button) %>">
+  <%= form_with url: likes_path, method: :post, local: true, class: "flex items-center" do |form| %>
+    <%= form.hidden_field :likeable_type, value: likeable.class.name %>
+    <%= form.hidden_field :likeable_id, value: likeable.id %>
+
+    <%= form.submit 'Like', class: 'bg-blue-500 text-white hover:bg-blue-600 font-semibold py-2 px-4 rounded-md transition duration-150 ease-in-out' %>
+  <% end %>
+
+  <p class="mt-4 text-gray-700"><%= likeable.likes.count %> Likes</p>
+</turbo-frame>
